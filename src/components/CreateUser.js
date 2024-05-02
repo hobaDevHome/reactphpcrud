@@ -15,7 +15,12 @@ export default function ListUser() {
   const handleSubmit = async (event) => {
     event.preventDefault();
     try {
-      axios.post("http://localhost/api/user/save", inputs);
+      axios
+        .post("http://localhost/api/user/save", inputs)
+        .then(function (response) {
+          console.log(response.data);
+          navigate("/");
+        });
     } catch (error) {
       console.log("deroiiiiiiiiiii", error);
     }
