@@ -11,6 +11,7 @@ import SoapDetails from "./components/SoapDetails";
 import AddSoap from "./components/AddSoap";
 import EditSoap from "./components/EditSoap";
 import NavBar from "./components/NavBar";
+import Footer from "./components/Footer";
 
 function App() {
   return (
@@ -27,6 +28,7 @@ function App() {
           <Route path="/soap/create" element={<AddSoap />} />
           <Route path="/soap/:id/edit" element={<EditSoap />} />
         </Routes>
+        <Footer />
       </BrowserRouter>
     </div>
   );

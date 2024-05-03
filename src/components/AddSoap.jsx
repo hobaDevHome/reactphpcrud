@@ -31,7 +31,10 @@ export default function AddSoap() {
     <div>
       <form onSubmit={handleSubmit}>
         <div class="border-b border-gray-900/10 pb-12">
-          <h2 class=" font-semibold leading-7 text-gray-900 text-xl">
+          <h2
+            class=" font-semibold leading-7 text-gray-900 text-3xl mt-4"
+            style={{ fontFamily: "Freeman" }}
+          >
             Add a new product
           </h2>
           <div class="mt-10 grid grid-cols-1 gap-x-6 gap-y-8 sm:grid-cols-6">
@@ -111,7 +114,7 @@ export default function AddSoap() {
         <div class="mt-6 flex items-center justify-end gap-x-6">
           <button
             type="submit"
-            class="rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
+            class="mb-4 rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
           >
             Save
           </button>
