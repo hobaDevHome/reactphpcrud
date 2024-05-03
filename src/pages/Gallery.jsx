@@ -3,7 +3,6 @@ import React from "react";
 
 import axios from "axios";
 import { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
 import SoapCard from "../components/SoapCard";
 
 const Gallery = ({ edit = false }) => {
@@ -21,14 +20,12 @@ const Gallery = ({ edit = false }) => {
   }
 
   return (
-    <div className=" m-10">
+    <div className=" mt-5">
       <div className="grid grid-cols-3 gap-6">
         {soapList &&
           soapList.map((item) => (
             <div key={item.id}>
-              <Link to={`/details/${item.id}`} style={{ marginRight: "10px" }}>
-                <SoapCard soap={item} edit={edit} />
-              </Link>
+              <SoapCard soap={item} edit={edit} />
             </div>
           ))}
       </div>

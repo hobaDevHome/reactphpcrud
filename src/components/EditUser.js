@@ -37,6 +37,7 @@ export default function ListUser() {
         navigate("/");
       });
   };
+
   return (
     <div>
       <h1>Edit user</h1>
