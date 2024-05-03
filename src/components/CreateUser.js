@@ -1,3 +1,5 @@
+// @ts-nocheck
+import React from "react";
 import { useState } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
@@ -16,13 +18,13 @@ export default function ListUser() {
     event.preventDefault();
     try {
       axios
-        .post("http://localhost/api/user/save", inputs)
+        .post("http://localhost/soapAPI/soap/save", inputs)
         .then(function (response) {
-          console.log(response.data);
+          // console.log(response.data);
           navigate("/");
         });
     } catch (error) {
-      console.log("deroiiiiiiiiiii", error);
+      console.log("create error", error);
     }
   };
   return (
@@ -33,26 +35,34 @@ export default function ListUser() {
           <tbody>
             <tr>
               <th>
-                <label>Name: </label>
+                <label>Title: </label>
               </th>
               <td>
-                <input type="text" name="name" onChange={handleChange} />
+                <input type="text" name="title" onChange={handleChange} />
               </td>
             </tr>
             <tr>
               <th>
-                <label>Email: </label>
+                <label>Description: </label>
               </th>
               <td>
-                <input type="text" name="email" onChange={handleChange} />
+                <input type="text" name="description" onChange={handleChange} />
               </td>
             </tr>
             <tr>
               <th>
-                <label>Mobile: </label>
+                <label>Price: </label>
               </th>
               <td>
-                <input type="text" name="mobile" onChange={handleChange} />
+                <input type="text" name="price" onChange={handleChange} />
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <label>url: </label>
+              </th>
+              <td>
+                <input type="text" name="url" onChange={handleChange} />
               </td>
             </tr>
             <tr>

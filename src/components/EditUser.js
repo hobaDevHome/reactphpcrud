@@ -1,3 +1,5 @@
+// @ts-nocheck
+import React from "react";
 import { useState, useEffect } from "react";
 import axios from "axios";
 import { useNavigate, useParams } from "react-router-dom";
@@ -14,8 +16,8 @@ export default function ListUser() {
   }, []);
 
   function getUser() {
-    axios.get(`http://localhost/api/user/${id}`).then(function (response) {
-      console.log(response.data);
+    axios.get(`http://localhost/soapAPI/soap/${id}`).then(function (response) {
+      // console.log(response.data);
       setInputs(response.data);
     });
   }
@@ -29,9 +31,9 @@ export default function ListUser() {
     event.preventDefault();
 
     axios
-      .put(`http://localhost/api/user/${id}/edit`, inputs)
+      .put(`http://localhost/soapAPI/soap/${id}/edit`, inputs)
       .then(function (response) {
-        console.log(response.data);
+        // console.log(response.data);
         navigate("/");
       });
   };
@@ -43,39 +45,52 @@ export default function ListUser() {
           <tbody>
             <tr>
               <th>
-                <label>Name: </label>
+                <label>Title: </label>
               </th>
               <td>
                 <input
-                  value={inputs.name}
+                  value={inputs.title}
                   type="text"
-                  name="name"
+                  name="title"
                   onChange={handleChange}
                 />
               </td>
             </tr>
             <tr>
               <th>
-                <label>Email: </label>
+                <label>Description: </label>
               </th>
               <td>
                 <input
-                  value={inputs.email}
+                  value={inputs.description}
                   type="text"
-                  name="email"
+                  name="description"
                   onChange={handleChange}
                 />
               </td>
             </tr>
             <tr>
               <th>
-                <label>Mobile: </label>
+                <label>Price: </label>
               </th>
               <td>
                 <input
-                  value={inputs.mobile}
+                  value={inputs.price}
                   type="text"
-                  name="mobile"
+                  name="price"
+                  onChange={handleChange}
+                />
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <label>url: </label>
+              </th>
+              <td>
+                <input
+                  value={inputs.url}
+                  type="text"
+                  name="url"
                   onChange={handleChange}
                 />
               </td>

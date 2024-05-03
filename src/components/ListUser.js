@@ -1,3 +1,5 @@
+// @ts-nocheck
+import React from "react";
 import axios from "axios";
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
@@ -9,17 +11,17 @@ export default function ListUser() {
   }, []);
 
   function getUsers() {
-    axios.get("http://localhost/api/users/").then(function (response) {
-      console.log(response.data);
+    axios.get("http://localhost/soapAPI/products/").then(function (response) {
+      // console.log(response.data);
       setUsers(response.data);
     });
   }
 
   const deleteUser = (id) => {
     axios
-      .delete(`http://localhost/api/user/${id}/delete`)
+      .delete(`http://localhost/soapAPI/soap/${id}/delete`)
       .then(function (response) {
-        console.log(response.data);
+        // console.log(response.data);
         getUsers();
       });
   };
@@ -27,32 +29,37 @@ export default function ListUser() {
   return (
     <div>
       <h1>List Users</h1>
+
       <table>
         <thead>
           <tr>
             <th>#</th>
-            <th>Name</th>
-            <th>Email</th>
-            <th>Mobile</th>
+            <th>Title</th>
+            <th>Description</th>
+            <th>Price</th>
             <th>Actions</th>
+            <th>Image</th>
           </tr>
         </thead>
         <tbody>
           {users ? (
-            users.map((user, key) => (
+            users.map((soap, key) => (
               <tr key={key}>
-                <td>{user.id}</td>
-                <td>{user.name}</td>
-                <td>{user.email}</td>
-                <td>{user.mobile}</td>
+                <td>{soap.id}</td>
+                <td>{soap.title}</td>
+                <td>{soap.description}</td>
+                <td>{soap.price}</td>
+                <td>
+                  <img src={soap.url} alt="" style={{ width: 200 }} />
+                </td>
                 <td>
                   <Link
-                    to={`user/${user.id}/edit`}
+                    to={`soap/${soap.id}/edit`}
                     style={{ marginRight: "10px" }}
                   >
                     Edit
                   </Link>
-                  <button onClick={() => deleteUser(user.id)}>Delete</button>
+                  <button onClick={() => deleteUser(soap.id)}>Delete</button>
                 </td>
               </tr>
             ))
