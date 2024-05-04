@@ -3,11 +3,14 @@ import soft from "../images/soft.jpg";
 
 const Soft = () => {
   return (
-    <div style={{ marginTop: 50, marginBottom: 20 }} className="flex relative">
-      <div className="w-3/5">
+    <div
+      style={{ marginTop: 50, marginBottom: 20 }}
+      className="flex relative flex-col-reverse items-center md:flex-row md:items-start"
+    >
+      <div className="w-90 md:w-3/5 flex justify-center items-center md:justify-start">
         <img src={soft} alt="" style={{ width: "80%", borderRadius: 7 }} />
       </div>
-      <div className="w-2/5 text-5xl">
+      <div className="w-90 md:w-2/5 text-5xl p-4">
         <div style={{ fontFamily: "Freeman" }}>
           <p>Soft on their health,</p>
           <p>

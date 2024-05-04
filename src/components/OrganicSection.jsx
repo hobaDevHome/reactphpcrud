@@ -5,22 +5,32 @@ import stampImage from "../images/stamp.png";
 
 const OrganicSection = () => {
   return (
-    <div style={{ marginTop: 50, marginBottom: 20 }} className="flex relative">
-      <div className="w-3/5">
+    <div
+      style={{ marginTop: 50, marginBottom: 20 }}
+      className="flex relative flex-col-reverse items-center md:flex-row md:items-start"
+    >
+      <div className="w-90 md:w-3/5 flex justify-center items-center md:justify-start">
         <img src={organic} alt="" style={{ width: "80%", borderRadius: 7 }} />
       </div>
-      <div className="w-2/5 text-5xl">
+      <div className="w-90 md:w-2/5 text-5xl p-4">
         <div style={{ fontFamily: "Freeman" }}>
           <p>Our products are</p>
           <p>
             natural and <span style={{ color: "#B0612C" }}> organic</span>
           </p>
         </div>
-        <div style={{ fontFamily: "", fontSize: 25, paddingTop: 20 }}>
+        <div
+          style={{
+            fontFamily: "",
+            fontSize: 25,
+            paddingTop: 20,
+            marginBottom: 10,
+          }}
+        >
           A family business committed to handcrafting the purest products for
           your home and body.
         </div>
-        <div className="flex justify-end relative">
+        <div className="hidden md:flex justify-end relative ">
           <img
             src={organic2}
             alt=""

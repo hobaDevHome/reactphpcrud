@@ -31,7 +31,7 @@ const CheckGallery = () => {
         </div>
       </div>
 
-      <div className="grid grid-cols-3 ">
+      <div className="grid xs:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 justify-center m-2 ">
         {soapList &&
           soapList.slice(0, 3).map((item) => (
             <div key={item.id}>
