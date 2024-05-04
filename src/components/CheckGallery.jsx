@@ -22,6 +22,9 @@ const CheckGallery = () => {
       });
   }
 
+  if (soapList.length === 0) {
+    return;
+  }
   return (
     <div className=" m-10">
       <div className="text-5xl mt-10">
