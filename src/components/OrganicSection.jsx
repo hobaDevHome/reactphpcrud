@@ -25,6 +25,7 @@ const OrganicSection = () => {
             fontSize: 25,
             paddingTop: 20,
             marginBottom: 10,
+            color: "GrayText",
           }}
         >
           A family business committed to handcrafting the purest products for
