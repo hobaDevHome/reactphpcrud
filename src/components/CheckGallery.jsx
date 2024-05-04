@@ -15,13 +15,13 @@ const CheckGallery = () => {
 
   function getSoapList() {
     axios
-      .get("https://purely-psi.vercel.app/soapAPI/products/")
+      .get("https://sql112.infinityfree.com/soapAPI/products/")
       .then(function (response) {
         //   console.log(response.data);
         setSoapList(response.data);
       });
   }
-
+  console.log("soapList", soapList);
   if (soapList.length === 0) {
     return;
   }
@@ -37,12 +37,12 @@ const CheckGallery = () => {
       </div>
 
       <div className="grid xs:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 justify-center m-2 ">
-        {soapList &&
+        {/* {soapList &&
           soapList.slice(0, 3).map((item) => (
             <div key={item.id}>
               <SoapCard soap={item} />
             </div>
-          ))}
+          ))} */}
       </div>
       <Link to={`/gallery`} style={{ marginRight: "10px" }}>
         <span>
