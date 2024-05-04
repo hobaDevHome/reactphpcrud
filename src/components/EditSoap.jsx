@@ -34,7 +34,7 @@ const EditSoap = () => {
       .put(`http://localhost/soapAPI/soap/${id}/edit`, inputs)
       .then(function (response) {
         // console.log(response.data);
-        navigate("/");
+        navigate("/dashboard");
       });
   };
 

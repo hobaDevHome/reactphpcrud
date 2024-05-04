@@ -21,7 +21,7 @@ export default function AddSoap() {
         .post("http://localhost/soapAPI/soap/save", inputs)
         .then(function (response) {
           // console.log(response.data);
-          navigate("/");
+          navigate("/dashboard");
         });
     } catch (error) {
       console.log("create error", error);
