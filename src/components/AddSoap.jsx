@@ -18,7 +18,7 @@ export default function AddSoap() {
     event.preventDefault();
     try {
       axios
-        .post("http://sql112.infinityfree.com/soapAPI/soap/save", inputs)
+        .post("https://sql112.infinityfree.com/soapAPI/soap/save", inputs)
         .then(function (response) {
           // console.log(response.data);
           navigate("/dashboard");

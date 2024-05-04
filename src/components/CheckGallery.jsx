@@ -15,7 +15,7 @@ const CheckGallery = () => {
 
   function getSoapList() {
     axios
-      .get("http://sql112.infinityfree.com/soapAPI/products/")
+      .get("https://sql112.infinityfree.com/soapAPI/products/")
       .then(function (response) {
         //   console.log(response.data);
         setSoapList(response.data);

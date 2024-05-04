@@ -18,7 +18,7 @@ const SoapDetails = () => {
 
   function getSoap() {
     axios
-      .get(`http://sql112.infinityfree.com/soapAPI/soap/${id}`)
+      .get(`https://sql112.infinityfree.com/soapAPI/soap/${id}`)
       .then(function (response) {
         // console.log(response.data);
         setSoapItem(response.data);

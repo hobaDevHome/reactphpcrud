@@ -17,7 +17,7 @@ const EditSoap = () => {
 
   function getUser() {
     axios
-      .get(`http://sql112.infinityfree.com/soapAPI/soap/${id}`)
+      .get(`https://sql112.infinityfree.com/soapAPI/soap/${id}`)
       .then(function (response) {
         // console.log(response.data);
         setInputs(response.data);
@@ -33,7 +33,7 @@ const EditSoap = () => {
     event.preventDefault();
 
     axios
-      .put(`http://sql112.infinityfree.com/soapAPI/soap/${id}/edit`, inputs)
+      .put(`https://sql112.infinityfree.com/soapAPI/soap/${id}/edit`, inputs)
       .then(function (response) {
         // console.log(response.data);
         navigate("/dashboard");
