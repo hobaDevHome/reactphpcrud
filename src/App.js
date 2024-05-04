@@ -1,9 +1,7 @@
 import React from "react";
 import "./App.css";
-import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
-import ListUser from "./components/ListUser";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 
-import EditUser from "./components/EditUser";
 import Home from "./pages/Home";
 import DashBoard from "./pages/DashBoard";
 import Gallery from "./pages/Gallery";
@@ -24,7 +22,7 @@ function App() {
           <Route path="/gallery" element={<Gallery />} />
           <Route path="/details/:id" element={<SoapDetails />} />
           <Route path="/dashboard" element={<DashBoard />} />
-          <Route path="/dashlist" element={<ListUser />} />
+
           <Route path="/soap/create" element={<AddSoap />} />
           <Route path="/soap/:id/edit" element={<EditSoap />} />
         </Routes>
