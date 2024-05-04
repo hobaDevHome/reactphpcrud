@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { RiEdit2Fill } from "react-icons/ri";
 import { MdDelete } from "react-icons/md";
 import { Link } from "react-router-dom";
@@ -12,7 +12,8 @@ const SoapCard = ({ soap, edit }) => {
       .delete(`http://localhost/soapAPI/soap/${id}/delete`)
       .then(function (response) {
         console.log(response.data);
-        navigate("/gallery");
+        navigate(0);
+        // navigate("/dashboard");
         // getUsers();
       });
   };

@@ -41,7 +41,7 @@ const EditSoap = () => {
   return (
     <div>
       <form onSubmit={handleSubmit}>
-        <div class="border-b border-gray-900/10 pb-12">
+        <div class="border-b border-gray-900/10 pb-12 pl-6">
           <h2
             class=" font-semibold leading-7 text-gray-900 text-3xl mt-4"
             style={{ fontFamily: "Freeman" }}
