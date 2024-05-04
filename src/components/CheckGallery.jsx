@@ -14,12 +14,14 @@ const CheckGallery = () => {
   }, []);
 
   function getSoapList() {
-    axios.get("http://localhost/soapAPI/products/").then(function (response) {
-      //   console.log(response.data);
-      setSoapList(response.data);
-    });
+    axios
+      .get("http://sql112.infinityfree.com/soapAPI/products/")
+      .then(function (response) {
+        //   console.log(response.data);
+        setSoapList(response.data);
+      });
   }
-  console.log("items----", soapList);
+
   return (
     <div className=" m-10">
       <div className="text-5xl mt-10">

@@ -17,10 +17,12 @@ const SoapDetails = () => {
   }, []);
 
   function getSoap() {
-    axios.get(`http://localhost/soapAPI/soap/${id}`).then(function (response) {
-      // console.log(response.data);
-      setSoapItem(response.data);
-    });
+    axios
+      .get(`http://sql112.infinityfree.com/soapAPI/soap/${id}`)
+      .then(function (response) {
+        // console.log(response.data);
+        setSoapItem(response.data);
+      });
   }
 
   return (

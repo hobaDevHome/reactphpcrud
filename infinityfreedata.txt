@@ -1,0 +1,11 @@
+infinityfree
+acc pawd: 3sXNVV9HfKyfXy
+
+db: soap
+
+MySQL DB Name : if0_36486823_soap
+MySQL User Name : if0_36486823
+MySQL Password : 
+
+MySQL Host Name : sql112.infinityfree.com
+PHPMyAdmin : Admin

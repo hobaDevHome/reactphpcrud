@@ -16,10 +16,12 @@ const EditSoap = () => {
   }, []);
 
   function getUser() {
-    axios.get(`http://localhost/soapAPI/soap/${id}`).then(function (response) {
-      // console.log(response.data);
-      setInputs(response.data);
-    });
+    axios
+      .get(`http://sql112.infinityfree.com/soapAPI/soap/${id}`)
+      .then(function (response) {
+        // console.log(response.data);
+        setInputs(response.data);
+      });
   }
 
   const handleChange = (event) => {
@@ -31,7 +33,7 @@ const EditSoap = () => {
     event.preventDefault();
 
     axios
-      .put(`http://localhost/soapAPI/soap/${id}/edit`, inputs)
+      .put(`http://sql112.infinityfree.com/soapAPI/soap/${id}/edit`, inputs)
       .then(function (response) {
         // console.log(response.data);
         navigate("/dashboard");

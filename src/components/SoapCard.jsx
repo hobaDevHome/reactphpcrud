@@ -9,7 +9,7 @@ const SoapCard = ({ soap, edit }) => {
   const navigate = useNavigate();
   const deleteUser = (id) => {
     axios
-      .delete(`http://localhost/soapAPI/soap/${id}/delete`)
+      .delete(`http://sql112.infinityfree.com/soapAPI/soap/${id}/delete`)
       .then(function (response) {
         console.log(response.data);
         navigate(0);
